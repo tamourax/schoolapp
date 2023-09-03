@@ -1,15 +1,45 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:schoolapp/Features/profile/presentation/widget/choices.dart';
 import 'package:schoolapp/core/utils/assets.dart';
 
 class ProfilePage extends StatelessWidget {
-  ProfilePage({Key? key}) : super(key: key);
+  const ProfilePage({Key? key}) : super(key: key);
+  passwordDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return Dialog(
+          backgroundColor: Colors.transparent,
+          child: BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 3, sigmaY: 3),
+            child: Container(
+              color: Colors.white,
+              width: 279,
+              height: 199,
+              child: const Column(
+                children: [
+                  Text("To protect your information, please enter the password"),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: "Enter Password"
+                    ),
+                  )
+                ],
+              ),
+            ),
+          )
+        );
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Padding(
-      padding: EdgeInsets.all(15),
+      padding: const EdgeInsets.all(15),
       child: Column(
         children: [
           Align(
@@ -32,13 +62,20 @@ class ProfilePage extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(height: 60,),
+          const SizedBox(
+            height: 60,
+          ),
           const Choices(icon: AssetsData.childProfile, title: "Child Profile"),
-          const Choices(icon: AssetsData.personalData, title: "Personal Data"),
+          Choices(
+            icon: AssetsData.personalData,
+            title: "Personal Data",
+            onTap: () {
+              passwordDialog(context);
+            },
+          ),
           const Choices(icon: AssetsData.setting, title: "Setting"),
           const Choices(icon: AssetsData.contact, title: "Contact Us"),
           const Choices(icon: AssetsData.logout, title: "Log out"),
-
         ],
       ),
     ));
