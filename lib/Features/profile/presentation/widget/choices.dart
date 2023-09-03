@@ -12,31 +12,31 @@ class Choices extends StatelessWidget {
       width: double.infinity,
       margin: const EdgeInsets.only(bottom: 32),
       padding: const EdgeInsets.symmetric(horizontal: 6),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Container(
-            child: Row(
-              children: [
-                Image.asset(icon),
-                const SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  title,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 15,
+      child: GestureDetector(
+        onTap: onTap,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              child: Row(
+                children: [
+                  Image.asset(icon),
+                  const SizedBox(
+                    width: 10,
                   ),
-                ),
-              ],
+                  Text(
+                    title,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 15,
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
-          GestureDetector(
-            onTap: onTap,
-            child: Image.asset(AssetsData.arrow),
-          )
-        ],
+            Image.asset(AssetsData.arrow)
+          ],
+        ),
       ),
     );
   }
