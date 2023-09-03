@@ -9,10 +9,17 @@ abstract class Styles {
     fontSize: 13,
     fontWeight: FontWeight.w400,
   );
+
+  //===amr
+  static const fontname = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+  );
   static const s2etailedtextstyle = TextStyle(
       fontSize: 15, fontWeight: FontWeight.w400, color: kdetailedtextcolor);
   static const boldstyle = TextStyle(
       fontSize: 23, fontWeight: FontWeight.bold, color: CupertinoColors.black);
+//===
 }
 static const buttontextstyle = TextStyle(
   fontSize: 16,

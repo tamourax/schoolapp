@@ -26,7 +26,7 @@ class ChatItem extends StatelessWidget {
                   children: [
                     Text(
                       'Mr Mohamed',
-                      style: Styles.maintextstyle.copyWith(fontSize: 16),
+                      style: Styles.fontname.copyWith(fontSize: 16),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 6),

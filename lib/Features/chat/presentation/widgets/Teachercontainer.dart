@@ -17,7 +17,7 @@ class Teachercontainer extends StatelessWidget {
           ),
           Text(
             'MR Mohamed',
-            style: Styles.maintextstyle,
+            style: Styles.fontname,
           ),
           SizedBox(
             height: 3,

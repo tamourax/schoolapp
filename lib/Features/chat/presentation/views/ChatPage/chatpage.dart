@@ -31,8 +31,8 @@ class ChatPage extends StatelessWidget {
               ),
               Text(
                 'Request',
-                style: Styles.maintextstyle
-                    .copyWith(color: Colors.white, fontSize: 17),
+                style:
+                    Styles.fontname.copyWith(color: Colors.white, fontSize: 17),
               )
             ],
           ),

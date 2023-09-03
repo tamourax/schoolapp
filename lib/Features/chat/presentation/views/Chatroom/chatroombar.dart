@@ -79,7 +79,7 @@ class Chatroombar extends StatelessWidget {
                 ),
                 Text(
                   'Request',
-                  style: Styles.maintextstyle
+                  style: Styles.fontname
                       .copyWith(color: Colors.white, fontSize: 17),
                 )
               ],
