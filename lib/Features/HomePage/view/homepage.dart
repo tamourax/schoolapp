@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
     const HomeView(),
     const ChatPage(),
     const BlogPage(),
-    const ProfilePage(),
+    ProfilePage(),
   ];
   int selectedIndex = 0;
   onTap(int index) {

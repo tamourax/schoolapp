@@ -44,7 +44,7 @@ abstract class AppRouter {
         builder: (context, state) => const ChatPage(),
       ), GoRoute(
         path: kprofilepage,
-        builder: (context, state) => const ProfilePage(),
+        builder: (context, state) => ProfilePage(),
       )
     ],
   );

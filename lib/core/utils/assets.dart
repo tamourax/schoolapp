@@ -9,4 +9,10 @@ class AssetsData {
   static const blogIcon = 'assets/images/blog.svg';
   static const personIcon = 'assets/images/person.svg';
   static const avatar = 'assets/images/Avatar.png';
+  static const childProfile = 'assets/images/Child Profile.png';
+  static const personalData = 'assets/images/Personal Data.png';
+  static const setting = 'assets/images/setting.png';
+  static const contact = 'assets/images/Contact.png';
+  static const logout = 'assets/images/Log Out.png';
+  static const arrow = 'assets/images/arrow.png';
 }
