@@ -23,4 +23,32 @@ abstract class Styles {
     fontWeight: FontWeight.w600,
     height: 1.22,
   );
+  static const appBarTitle = TextStyle(
+    color: Color(0xFF181D26),
+    fontSize: 18,
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w600,
+    height: 1.22,
+  );
+  static const Personallabal = TextStyle(
+    color: Color(0xFF070D18),
+    fontSize: 16,
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w500,
+    height: 1.38,
+  );
+  static const textEdit = TextStyle(
+    color: Color(0xFF1246AC),
+    fontSize: 14,
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w400,
+    height: 1.50,
+    letterSpacing: -0.31,
+  );
+  // static const bottomPersonalData = TextStyle(
+  //   fontSize: 18,
+  //   fontFamily: 'Inter',
+  //   fontWeight: FontWeight.w600,
+  //   height: 1.22,
+  // );
 }

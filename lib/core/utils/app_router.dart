@@ -1,10 +1,9 @@
-
-
 import 'package:go_router/go_router.dart';
-
+import 'package:schoolapp/Features/HomePage/view/homepage.dart';
+import 'package:schoolapp/Features/profile/presentation/views/personal_data.dart';
+import 'package:schoolapp/Features/profile/presentation/views/setting.dart';
 
 import '../../Features/Home/presentation/views/home_view.dart';
-import '../../Features/Splash/presentation/views/splash_view.dart';
 import '../../Features/blog/presentation/views/blog.dart';
 import '../../Features/chat/presentation/views/chatpage.dart';
 import '../../Features/onboarding/presentation/views/onboarding_veiw.dart';
@@ -18,12 +17,13 @@ abstract class AppRouter {
   static const kblogpage = '/blocpage';
   static const kchatpage = '/chatpage';
   static const kprofilepage = '/profilepage';
-
+  static const kpersonaldata = '/personaldata';
+  static const ksetting = "/setting";
   static final router = GoRouter(
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => const SplashView(),
+        builder: (context, state) => const HomePage(),
       ),
       GoRoute(
         path: kHomeView,
@@ -36,15 +36,26 @@ abstract class AppRouter {
       GoRoute(
         path: konboardingpage,
         builder: (context, state) => const OnBoarding(),
-      ), GoRoute(
+      ),
+      GoRoute(
         path: kblogpage,
         builder: (context, state) => const BlogPage(),
-      ), GoRoute(
+      ),
+      GoRoute(
         path: kchatpage,
         builder: (context, state) => const ChatPage(),
-      ), GoRoute(
+      ),
+      GoRoute(
         path: kprofilepage,
-        builder: (context, state) => ProfilePage(),
+        builder: (context, state) => const ProfilePage(),
+      ),
+      GoRoute(
+        path: kpersonaldata,
+        builder: (context, state) => PersonalData(),
+      ),
+      GoRoute(
+        path: ksetting,
+        builder: (context, state) => Setting(),
       )
     ],
   );

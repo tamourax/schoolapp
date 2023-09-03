@@ -16,4 +16,8 @@ class AssetsData {
   static const logout = 'assets/images/Log Out.png';
   static const arrow = 'assets/images/arrow.png';
   static const eyeof = "assets/images/eye-off.png";
+  static const lockicon = "assets/images/lock.svg";
+  static const phoneicon = "assets/images/phone.svg";
+  static const arrowBack = "assets/images/arrow_back_ios.svg";
+
 }
