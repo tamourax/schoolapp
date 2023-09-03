@@ -4,13 +4,6 @@ import 'package:schoolapp/core/utils/assets.dart';
 
 class ProfilePage extends StatelessWidget {
   ProfilePage({Key? key}) : super(key: key);
-  final Map choicesList = {
-    "Child Profile": AssetsData.childProfile,
-    "Personal Data": AssetsData.personalData,
-    "Setting": AssetsData.setting,
-    "Contact Us": AssetsData.contact,
-    "Log out": AssetsData.logout,
-  };
 
   @override
   Widget build(BuildContext context) {
@@ -40,11 +33,12 @@ class ProfilePage extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 60,),
-          ...List.generate(choicesList.length, (index) {
-            return Choices(
-                icon: choicesList.values.elementAt(index),
-                title: choicesList.keys.elementAt(index));
-          })
+          Choices(icon: AssetsData.childProfile, title: "Child Profile"),
+          Choices(icon: AssetsData.personalData, title: "Personal Data"),
+          Choices(icon: AssetsData.setting, title: "Setting"),
+          Choices(icon: AssetsData.contact, title: "Contact Us"),
+          Choices(icon: AssetsData.logout, title: "Log out"),
+
         ],
       ),
     ));

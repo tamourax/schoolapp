@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:schoolapp/core/utils/assets.dart';
 
 class Choices extends StatelessWidget {
-  const Choices({super.key, required this.icon, required this.title});
+  const Choices({super.key, required this.icon, required this.title, this.onTap});
   final String icon;
   final String title;
+  final Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,7 +19,9 @@ class Choices extends StatelessWidget {
             child: Row(
               children: [
                 Image.asset(icon),
-                const SizedBox(width: 10,),
+                const SizedBox(
+                  width: 10,
+                ),
                 Text(
                   title,
                   style: const TextStyle(
@@ -30,9 +33,7 @@ class Choices extends StatelessWidget {
             ),
           ),
           GestureDetector(
-            onTap: () {
-              
-            },
+            onTap: onTap,
             child: Image.asset(AssetsData.arrow),
           )
         ],
