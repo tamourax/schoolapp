@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:schoolapp/Features/Home/presentation/views/home_view.dart';
 import 'package:schoolapp/Features/blog/presentation/views/blog.dart';
-import 'package:schoolapp/Features/chat/presentation/views/chatpage.dart';
+import 'package:schoolapp/Features/chat/presentation/views/ChatPage/chatpage.dart';
 import 'package:schoolapp/Features/profile/presentation/views/profilepage.dart';
 import 'package:schoolapp/constants.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:schoolapp/core/utils/assets.dart';
 
 class HomePage extends StatefulWidget {
@@ -17,7 +17,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   List<Widget> page = [
     const HomeView(),
-    const ChatPage(),
+    ChatPage(),
     const BlogPage(),
     ProfilePage(),
   ];
