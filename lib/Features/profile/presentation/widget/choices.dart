@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:schoolapp/core/utils/assets.dart';
+import 'package:schoolapp/core/utils/styles.dart';
 
 class Choices extends StatelessWidget {
   const Choices({super.key, required this.icon, required this.title, this.onTap});
@@ -26,10 +27,7 @@ class Choices extends StatelessWidget {
                   ),
                   Text(
                     title,
-                    style: const TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 15,
-                    ),
+                    style: Styles.font16
                   ),
                 ],
               ),
