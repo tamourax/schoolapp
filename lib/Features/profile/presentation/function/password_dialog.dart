@@ -1,70 +1,65 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:schoolapp/Features/profile/presentation/widget/custom_bottom_dialog.dart';
+import 'package:schoolapp/Features/profile/presentation/widget/custom_textfield.dart';
+import 'package:schoolapp/core/utils/app_router.dart';
 import 'package:schoolapp/core/utils/styles.dart';
 
-passwordDialog(bool eye, BuildContext context, void Function()? onPressed){
+passwordDialog(BuildContext context) {
+  double height = MediaQuery.of(context).size.height;
+  double width = MediaQuery.of(context).size.width;
   showDialog(
-      context: context,
-      builder: (context) {
-        return Dialog(
-            backgroundColor: Colors.transparent,
-            child: BackdropFilter(
-              filter: ImageFilter.blur(sigmaX: 3, sigmaY: 3),
-              child: Container(
-                padding: EdgeInsets.all(15),
-                width: 340,
-                height: 220,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(15)
-                ),
-                child: Column(
-                  children: [
-                    const Text(
-                      "To protect your information, please enter the password",
-                      style: Styles.font16,
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    TextField(
-                      obscureText: eye,
-                      decoration: InputDecoration(
-                          hintText: "Enter Password",
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10)),
-                          suffixIcon: IconButton(
-                              onPressed: onPressed,
-                              icon: Icon(eye
-                                  ? Icons.visibility
-                                  : Icons.visibility_off_outlined))),
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    Row(
-                      children: [
-                        const CustomBottomDialog(
-                          text: "Enter",
-                        ),
-                        const SizedBox(
-                          width: 30,
-                        ),
-                        CustomBottomDialog(
-                          text: "Cancel",
-                          cancel: true,
-                          onTap: () {
-                            Navigator.pop(context);
-                          },
-                        )
-                      ],
-                    )
-                  ],
-                ),
+    context: context,
+    builder: (context) {
+      return Dialog(
+          backgroundColor: Colors.transparent,
+          child: BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 3, sigmaY: 3),
+            child: Container(
+              padding: const EdgeInsets.all(15),
+              height: height / 3,
+              width: width,
+              decoration: BoxDecoration(
+                  color: Colors.white, borderRadius: BorderRadius.circular(15)),
+              child: Column(
+                children: [
+                  const Text(
+                    "To protect your information, please enter the password",
+                    style: Styles.font16,
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  CustomTextFeild(),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  Row(
+                    children: [
+                      CustomBottomDialog(
+                        text: "Enter",
+                        onTap: () {
+                          GoRouter.of(context).go(AppRouter.kpersonaldata);
+                        },
+                      ),
+                      const SizedBox(
+                        width: 15,
+                      ),
+                      CustomBottomDialog(
+                        text: "Cancel",
+                        cancel: true,
+                        onTap: () {
+                          context.pop();
+                        },
+                      )
+                    ],
+                  )
+                ],
               ),
-            ));
-      },
-    );
+            ),
+          ));
+    },
+  );
 }

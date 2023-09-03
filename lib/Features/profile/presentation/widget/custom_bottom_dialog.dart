@@ -9,11 +9,13 @@ class CustomBottomDialog extends StatelessWidget {
   final bool cancel;
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: 110,
-        height: 45,
+        width: width/3.1,
+        height: height/13,
         decoration: BoxDecoration(
           color: cancel? Colors.white: kPrimaryColor,
           border: Border.all(color: kPrimaryColor, width: 1),

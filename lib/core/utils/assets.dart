@@ -15,9 +15,14 @@ class AssetsData {
   static const contact = 'assets/images/Contact.png';
   static const logout = 'assets/images/Log Out.png';
   static const arrow = 'assets/images/arrow.png';
+  static const eyeof = "assets/images/eye-off.png";
+  static const lockicon = "assets/images/lock.svg";
+  static const phoneicon = "assets/images/phone.svg";
+  static const arrowBack = "assets/images/arrow_back_ios.svg";
   static const Attachment_chat = 'assets/images/Attachment_chat.png';
   static const read_cheaker = 'assets/images/read_cheaker.png';
   static const send_messege = 'assets/images/send_messege.png';
   static const Teacher_messege = 'assets/images/Teacher_messege.png';
   static const mymessege = 'assets/images/mymessege.png';
+
 }
