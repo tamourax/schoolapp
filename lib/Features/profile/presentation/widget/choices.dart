@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:schoolapp/core/utils/assets.dart';
+import 'package:schoolapp/core/utils/styles.dart';
 
 class Choices extends StatelessWidget {
   const Choices({super.key, required this.icon, required this.title, this.onTap});
@@ -8,12 +9,12 @@ class Choices extends StatelessWidget {
   final Function()? onTap;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      margin: const EdgeInsets.only(bottom: 32),
-      padding: const EdgeInsets.symmetric(horizontal: 6),
-      child: GestureDetector(
-        onTap: onTap,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: double.infinity,
+        margin: const EdgeInsets.only(bottom: 32),
+        padding: const EdgeInsets.symmetric(horizontal: 6),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -26,10 +27,7 @@ class Choices extends StatelessWidget {
                   ),
                   Text(
                     title,
-                    style: const TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 15,
-                    ),
+                    style: Styles.font16
                   ),
                 ],
               ),

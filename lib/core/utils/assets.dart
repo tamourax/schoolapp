@@ -15,4 +15,5 @@ class AssetsData {
   static const contact = 'assets/images/Contact.png';
   static const logout = 'assets/images/Log Out.png';
   static const arrow = 'assets/images/arrow.png';
+  static const eyeof = "assets/images/eye-off.png";
 }
